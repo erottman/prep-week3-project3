@@ -200,7 +200,18 @@ console.log(laurenDinner2);
 // 12. Get the length of the fourth classmate's name.
 
 // 13. Clear the classmates value.
+// Answer for 10 -13 below
 
+var jsWorkshop = new Object();
+
+jsWorkshop.classmates = ["bob", "steve", "bunny", "jen", "alex"];
+
+console.log(jsWorkshop);
+console.log(jsWorkshop.classmates.length);
+console.log(delete jsWorkshop.classmates);
+console.log(jsWorkshop);
+console.log(jsWorkshop.classmates = "");
+console.log(jsWorkshop);
 
 
 
