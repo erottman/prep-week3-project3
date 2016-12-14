@@ -85,6 +85,29 @@ me2.age = me2.currentYear - me2.birthYear;
 // 3. Using the "me" object, use dot notation and bracket notation to access the value of your city and display the results in the HTML page.
 
 
+var me = new Object();
+
+me.name = "Erica";
+me.city = "Seattle";
+me.job = "student";
+me.birthYear = 1978;
+me.currentYear = 2017;
+me.age = me.currentYear - me.birthYear ;
+me.family = ["jeremy", "zilla", "guvy"];
+
+console.log(me);
+
+console.log(me.name);
+console.log(me['name']);
+console.log(me.city);
+console.log(me['city']);
+console.log(me.job);
+console.log(me.birthYear);
+console.log(me["birthYear"]);
+console.log(me.age);
+console.log(me['age']);
+console.log(me.family);
+console.log(me['family']);
 
 
 
