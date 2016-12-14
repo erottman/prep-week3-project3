@@ -34,11 +34,11 @@ me.age = me.birthYear - me.currentYear;
 console.log(me);
 
 var me2 = {
-name : "Erica",
-city : 'seattle',
-job  : "student",
-birthYear : 1978,
-currentYear : 2017,
+    name: "Erica",
+    city: 'seattle',
+    job: "student",
+    birthYear: 1978,
+    currentYear: 2017,
 };
 
 console.log(me2);
@@ -67,12 +67,12 @@ me.family = ["jeremy", "zilla", "guvy"];
 console.log(me);
 
 var me2 = {
-name : "Erica",
-city : 'seattle',
-job  : "student",
-birthYear : 1978,
-currentYear : 2017,
-family : ["jeremy", "zilla", "guvy"]
+    name: "Erica",
+    city: 'seattle',
+    job: "student",
+    birthYear: 1978,
+    currentYear: 2017,
+    family: ["jeremy", "zilla", "guvy"]
 };
 
 console.log(me2);
@@ -92,7 +92,7 @@ me.city = "Seattle";
 me.job = "student";
 me.birthYear = 1978;
 me.currentYear = 2017;
-me.age = me.currentYear - me.birthYear ;
+me.age = me.currentYear - me.birthYear;
 me.family = ["jeremy", "zilla", "guvy"];
 
 console.log(me);
@@ -115,56 +115,80 @@ console.log(me['family']);
 
 
 // Use the following Object for questions 4-9:
-var invitees = { adults: [{
-                          name: "Penny",
-                          table: 10,
-                          dinnerChoice: ["salad", "beef", "ice cream"]
-                        },
-                        {
-                          name: "Billy",
-                          table: 12,
-                          dinnerChoice: ["soup", "beef", "sorbet"]
-                        },
-                        {
-                          name: "Lauren",
-                          table: 3,
-                          dinnerChoice: ["soup", "chicken", "ice cream"],
-                          specialConsiderations: { allergies: "melon",
-                                                   seating: "Don't sit her next to ex husband at table 8."}
-                        }
-                        ],
-                  children: [{
-                             name: "Junior",
-                             table: 4,
-                             allergies: ["nuts"]
-                            },
-                            { name: "Pablo",
-                            table: 4,
-                            allergies: ["gluten", "following directions"]
-                            },
-                            { name: "Ada",
-                            table: 4,
-                            allergies: ["boys"]
-                            }
-                         ]
-                      };
+var invitees = {
+    adults: [{
+        name: "Penny",
+        table: 10,
+        dinnerChoice: ["salad", "beef", "ice cream"]
+    }, {
+        name: "Billy",
+        table: 12,
+        dinnerChoice: ["soup", "beef", "sorbet"]
+    }, {
+        name: "Lauren",
+        table: 3,
+        dinnerChoice: ["soup", "chicken", "ice cream"],
+        specialConsiderations: {
+            allergies: "melon",
+            seating: "Don't sit her next to ex husband at table 8."
+        }
+    }],
+    children: [{
+        name: "Junior",
+        table: 4,
+        allergies: ["nuts"]
+    }, {
+        name: "Pablo",
+        table: 4,
+        allergies: ["gluten", "following directions"]
+    }, {
+        name: "Ada",
+        table: 4,
+        allergies: ["boys"]
+    }]
+};
 
 
 // 4. Access Penny's dinner choice (this will be the second item in his dinnerChoice array)
 
+console.log(invitees.adults[0].dinnerChoice);
+console.log(invitees.adults[0]["dinnerChoice"]);
+
+
 // 5. Access Pablo's table number.
+
+console.log(invitees.children[1].table);
+console.log(invitees.children[1]["table"]);
 
 // 6. Access Lauren's seating specialConsideration.
 
+console.log(invitees.adults[2].specialConsiderations);
+console.log(invitees.adults[2]["specialConsiderations"]);
+
 // 7. Access Billy's dessert choice (this will be the third item in his dinnerChoice array)
 
+console.log(invitees.adults[1].dinnerChoice[2]);
+console.log(invitees.adults[1]["dinnerChoice"][2]);
+
+
 // 8. Access Ada's allergies.
+
+console.log(invitees.children[2].allergies);
+console.log(invitees.children[2]["allergies"]);
+
+
 
 // 9. Create a string that reads Lauren's dinner choice in a sentence.
 // Desired result: "Lauren's appetizer is _______. She will be eating ______ for dinner
 // and has selected ________ as her dessert."
 
+var laurenDinner = "Lauren's appetizer is " + invitees.adults[2].dinnerChoice[0] + ". She will be eating " + invitees.adults[2].dinnerChoice[1] + " for dinner and has selected" + invitees.adults[2].dinnerChoice[2] + " as her dessert."
 
+console.log(laurenDinner);
+
+var laurenDinner2 = "Lauren's appetizer is " + invitees.adults[2]["dinnerChoice"][0] + ". She will be eating " + invitees.adults[2]['dinnerChoice'][1] + " for dinner and has selected" + invitees.adults[2]['dinnerChoice'][2] + " as her dessert."
+
+console.log(laurenDinner2);
 
 
 
@@ -191,22 +215,22 @@ var invitees = { adults: [{
 //     Insert the three objects into the "books" object.
 
 // Final desired result:
-    // var books = {ISBN22222:  {
-    //                             title: "You Had Me at Woof",
-    //                             author: "Julie Klum",
-    //                             pages: 207
-    //                           },
-    //              ISBN33333:  {
-    //                             title: "The Catcher in the Rye",
-    //                             author: "JD Salinger",
-    //                             pages: 214
-    //                           },
-    //              ISBN44444:  {
-    //                             title: "Bangkok Haunts",
-    //                             author: "John Burdett",
-    //                             pages: 569,
-    //                           }
-    //             }
+// var books = {ISBN22222:  {
+//                             title: "You Had Me at Woof",
+//                             author: "Julie Klum",
+//                             pages: 207
+//                           },
+//              ISBN33333:  {
+//                             title: "The Catcher in the Rye",
+//                             author: "JD Salinger",
+//                             pages: 214
+//                           },
+//              ISBN44444:  {
+//                             title: "Bangkok Haunts",
+//                             author: "John Burdett",
+//                             pages: 569,
+//                           }
+//             }
 
 // C. Access the author of the first book.
 
