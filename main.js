@@ -54,6 +54,30 @@ me2.age = me2.currentYear - me2.birthYear;
 //                              family: ['Joan', 'Kyle', 'Hank'] }
 
 
+var me = new Object();
+
+me.name = "Erica";
+me.city = "Seattle";
+me.job = "student";
+me.bithYear = 1978;
+me.currentYear = 2017;
+me.age = me.birthYear - me.currentYear;
+me.family = ["jeremy", "zilla", "guvy"];
+
+console.log(me);
+
+var me2 = {
+name : "Erica",
+city : 'seattle',
+job  : "student",
+birthYear : 1978,
+currentYear : 2017,
+family : ["jeremy", "zilla", "guvy"]
+};
+
+console.log(me2);
+
+me2.age = me2.currentYear - me2.birthYear;
 
 
 
