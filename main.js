@@ -220,6 +220,9 @@ console.log(jsWorkshop);
 // ADVANCED TRACK
 // A. Create an empty object called "books".
 
+var books = new Object();
+var books = {};
+
 // B. Create three book objects that contain book titles, their author, and number of pages.
 //     The name of each object should be some kind of made up ISBN number.
 //     (Feel free to make up the titles. And the authors. Have fun. No pressure.)
@@ -243,13 +246,66 @@ console.log(jsWorkshop);
 //                           }
 //             }
 
+
+var books = {
+  ISBN5555 : {
+            title : "To Kill a Mockingbird",
+            author : "Harper Lee",
+            pages : 240
+  },
+  ISBN6666 : {
+            title : "Mobey Dick",
+            author : "Ernest Hemingway",
+            pages : 260
+  },
+  ISBN7777 : {
+            title : "The Grinch Who Stole Xmas",
+            author: "Jim Hanson",
+            pages : 30,
+      }
+
+};
+
+console.log(books);
+
+
 // C. Access the author of the first book.
 
-// D. Get the length of the author the the third book.
+console.log(books.ISBN5555.author);
+console.log(books.ISBN5555["author"]);
+
+// D. Get the length of the author the the third book
+
+console.log(books.ISBN7777.author.length);
+console.log(books.ISBN7777["author"].length);
+
 
 // E. To each book object variable, add a key of "dateRead" with a value of the year you read the book.
 //     (Go ahead and make this up, too. Get wild.)
 
+console.log(books.ISBN5555.dateRead = 1945);
+console.log(books.ISBN5555["dateRead"] = 1945);
+console.log(books.ISBN5555);
+
+console.log(books.ISBN6666.dateRead = 1965);
+console.log(books.ISBN6666["dateRead"] = 1965);
+console.log(books.ISBN6666);
+
+console.log(books.ISBN7777.dateRead = 2001);
+console.log(books.ISBN7777["dateRead"] = 2001);
+console.log(books.ISBN7777);
+
+
+
 // F. Remove the second book from the books object.
 
+console.log(delete books.ISBN6666);
+console.log(books.ISBN6666 = "");
+console.log(books);
+
+
 // G. Explain, in your own words, the difference between Literal Notation and Constructor Notation.
+
+Literal Notation - simple container of data
+
+Constructor Notation - add behaviour to your object after it has been created
